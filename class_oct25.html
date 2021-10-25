@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="stylesheet" href="class_oct25.css">
+    <style>
+         p{
+             columns: blue;
+         }
+         #para{
+             color: green;
+         }
+         .paraclass2{
+             color: pink;
+         }
+         .paraclass{
+             color:darkslateblue;
+         }
+         /* attribute selector */
+         [attr="value"]{
+             color: darkgreen;
+         }
+         [attr]{
+             color:yellow;
+         }
+
+         [id="para"]{
+             color: royalblue;
+         }
+         #button:hover{
+                 color: saddlebrown;
+         }
+         /* active means when you click on it  */
+         /* #button:active{
+             color:red
+         }
+         p::first-letter{
+             color:coral;
+         } */
+         /* p::before{
+             content: 'vivek ';
+         } */
+
+         /* #parent .something{
+             color: yellow;
+         } */
+         #favchild + p{
+             color: grey
+         }
+         #favchild ~p{
+             color: cyan;
+         }
+    </style>
+</head>
+<body>
+    <!-- <p  style="color: darkred;">This a sample text.</p>
+    <p  attr="value">This a sample text.</p>
+    <p id="para" class="paraclass" attr="value">This a sample text.</p>
+    <p id="para">This a sample text.</p>
+    <p  class="paraclass paraclass2" >This a sample text.</p>
+    <p class="paraclass">This a sample text.</p>
+    <p attr="value2">This a sample text.</p>
+    <p >This a sample text.</p>
+    <p >This a sample text.</p>
+    <p >This a sample text.</p>
+    <button id="button">Fancy</button> -->
+    <div id="parent"><p> Para 1</p></div>
+    <div><p class="something"> Para 1</p></div>
+    <div>
+        <p> Para 1.1</p>
+        <p> Para 1.2</p>
+        <p id="favchild"> Para 1.3</p>
+        <p> Para 1.4</p>
+        <p> Para 1.5</p>
+        <p> Para 1.6</p>
+
+    </div>
+    <div><p> Para 1</p></div>
+    <div><p> Para 1</p></div>
+    <div><p> Para 1</p></div>
+    <div><p> Para 1</p></div>
+  
+   
+
+</body>
+</html>
+<!-- 
+    Ways to write the CSS
+1- Inline- we write in same tag by giving style attribute
+2- Internal- written in head tags
+3- External- 
+priority-     inline>internal>external    
+-----------------------------------------------
+css selector
+1) id selector- it has higher specificity than anything 
+-----------------------------------------------
+2) class selector-  less priority 
+                    doesnt matter in what sequence class names are written ex -class="paraclass paraclass2" , css sequence matters what comes after 
+3)attribute selector- attr="value"
+                      [attr="value"]  {cssc code}    
+4) Pseudo selector-      ex- hover  
+a)pseudo classes- start with :
+b) pseudo elements- start with :: (is a subset of html element means applied to a specific subset of the html element)
+5) tag selector
+6)universal selector (*)
+--------------------------------------------
+CombinTORS--
+1) Greater than >   -descendent selector
+2)space( )          -child selector
+3)plus +            - adjacent sibling selector
+4)tilde(~)          - general sibling selector     
+ note - plus and tilde are for only next elements of same parent , not applied on before elements-->
